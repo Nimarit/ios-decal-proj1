@@ -11,10 +11,6 @@ you have completed in 24 hours. As long as your application conforms every one
 of our required criteria (see below), you can add whatever additional features,
 views, UI, etc. you want. 
 
-You *must* create a Universal app when you construct your Xcode project, since
-the app you create will work across modern iPhones and iPads in all screen
-orientations.
-
 ## Instructions
 1. Fork the assignment's repository from (https://github.com/iosdecal).
 2. Clone your forked repository to your local machine (the URL should contain
@@ -23,6 +19,7 @@ orientations.
 4. **Create a To-Do List app**
   * Required
     * General
+      * Create a Universal app when you construct your Xcode project.
       * UI must scale to iPhone 6 and up and all iPads in both Portait and
       Landscape orientations.
         * Hint: Think Auto-Layout. For UILabels, autoshrink in the Attributes
