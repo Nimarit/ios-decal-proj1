@@ -11,8 +11,6 @@ import UIKit
 
 class HelpScreen: UIInputViewController {
     
-    @IBOutlet var toggleButton: UIButton!
-    
     @IBOutlet var mondayButton: UIButton!
     @IBOutlet var tuesdayButton: UIButton!
     @IBOutlet var wednesdayButton: UIButton!
@@ -69,15 +67,5 @@ class HelpScreen: UIInputViewController {
         button.layer.cornerRadius = button.bounds.size.width / 2
         button.clipsToBounds = true
     }
-    
-    //    func wasDragged (button : UIButton, event :UIEvent) {
-    //        let touch : UITouch = ((event.touchesForView(button)!.first! as UITouch))
-    //        let previousLocation : CGPoint = touch .previousLocationInView(button)
-    //        let location : CGPoint = touch .locationInView(button)
-    //        let delta_x :CGFloat = location.x - previousLocation.x
-    //        let delta_y :CGFloat = location.y - previousLocation.y
-    //        button.center = CGPointMake(button.center.x + delta_x,
-    //            button.center.y + delta_y);
-    //    }
     
 }
