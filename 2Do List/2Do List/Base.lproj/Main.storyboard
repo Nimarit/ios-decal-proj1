@@ -22,14 +22,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks Completed in past 24 hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJu-Ao-kuQ">
                                 <rect key="frame" x="160" y="72" width="265" height="73"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="265" id="zBt-YH-UbW"/>
+                                    <constraint firstAttribute="height" constant="73" id="WTi-Xv-YJg"/>
+                                    <constraint firstAttribute="width" constant="265" id="vwo-r7-tAd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-Si-JTV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-Si-JTV">
                                 <rect key="frame" x="201" y="153" width="182" height="310"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="C4I-Mg-EzZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -37,9 +41,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OJu-Ao-kuQ" firstAttribute="leading" secondItem="Pyg-li-mMV" secondAttribute="leading" constant="160" id="SIb-gx-ohd"/>
-                            <constraint firstItem="OJu-Ao-kuQ" firstAttribute="top" secondItem="sqG-fx-oWz" secondAttribute="bottom" constant="8" symbolic="YES" id="bIE-pL-LKM"/>
-                            <constraint firstItem="bML-rg-cTa" firstAttribute="top" secondItem="OJu-Ao-kuQ" secondAttribute="bottom" constant="455" id="hZh-Tg-lDa"/>
+                            <constraint firstItem="Bba-Si-JTV" firstAttribute="centerX" secondItem="OJu-Ao-kuQ" secondAttribute="centerX" id="Lno-dk-3hr"/>
+                            <constraint firstItem="OJu-Ao-kuQ" firstAttribute="leading" secondItem="Pyg-li-mMV" secondAttribute="leading" constant="160" id="pn1-sl-7FD"/>
+                            <constraint firstItem="bML-rg-cTa" firstAttribute="top" secondItem="Bba-Si-JTV" secondAttribute="bottom" constant="137" id="rZq-gn-7js"/>
+                            <constraint firstItem="Bba-Si-JTV" firstAttribute="top" secondItem="OJu-Ao-kuQ" secondAttribute="bottom" constant="8" symbolic="YES" id="uT8-fV-WFh"/>
+                            <constraint firstItem="OJu-Ao-kuQ" firstAttribute="top" secondItem="sqG-fx-oWz" secondAttribute="bottom" constant="8" symbolic="YES" id="vGG-Vi-PZW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s7T-97-V1k">
@@ -173,6 +179,7 @@
                         <outlet property="sundayButton" destination="j7J-nB-9MS" id="Ahb-mh-AOR"/>
                         <outlet property="thursdayButton" destination="Yf6-R1-8jd" id="SS8-I1-SWW"/>
                         <outlet property="tuesdayButton" destination="fhd-tO-pJP" id="Owm-hc-oLs"/>
+                        <outlet property="view" destination="hg4-Lt-PFo" id="KbY-uQ-59P"/>
                         <outlet property="wednesdayButton" destination="RPw-jH-UhW" id="FWK-oE-qJb"/>
                     </connections>
                 </viewController>
@@ -245,7 +252,7 @@
         <!--Add Item View Controller-->
         <scene sceneID="rIF-2A-Adr">
             <objects>
-                <viewController id="z3y-xr-VZq" customClass="AddItemViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="z3y-xr-VZq" customClass="AddItemViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qnO-Xx-Eb0"/>
                         <viewControllerLayoutGuide type="bottom" id="TKI-Pu-p4q"/>
@@ -293,7 +300,7 @@
         <!--Welcome to Monday!-->
         <scene sceneID="vxo-VI-nXv">
             <objects>
-                <tableViewController id="nc5-z0-Fdf" customClass="MondayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="partialCurl" id="nc5-z0-Fdf" customClass="MondayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kLU-AF-iPi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,7 +375,7 @@
         <!--Welcome to Wednesday!-->
         <scene sceneID="gKf-NY-lCc">
             <objects>
-                <tableViewController id="fPR-SG-aWx" customClass="WednesdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="partialCurl" id="fPR-SG-aWx" customClass="WednesdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P3Z-av-KCt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +432,7 @@
         <!--Welcome to Thursday!-->
         <scene sceneID="HGH-bG-7wk">
             <objects>
-                <tableViewController id="8H1-Hw-Gin" customClass="ThursdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="partialCurl" id="8H1-Hw-Gin" customClass="ThursdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ynq-sY-vRu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -482,7 +489,7 @@
         <!--Welcome to Friday!-->
         <scene sceneID="558-pP-qBt">
             <objects>
-                <tableViewController id="QWi-jx-Smn" customClass="FridayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="partialCurl" id="QWi-jx-Smn" customClass="FridayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tom-tr-XSd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,7 +543,7 @@
         <!--Welcome to Tuesday!-->
         <scene sceneID="Cgx-2X-SVe">
             <objects>
-                <tableViewController id="M2g-oI-evY" customClass="TuesdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="partialCurl" id="M2g-oI-evY" customClass="TuesdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1en-l6-c12">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -593,7 +600,7 @@
         <!--Welcome to Saturday!-->
         <scene sceneID="kfr-Re-Qge">
             <objects>
-                <tableViewController id="JGR-NI-nlQ" customClass="SaturdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="partialCurl" id="JGR-NI-nlQ" customClass="SaturdayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vwn-4g-jOn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -650,7 +657,7 @@
         <!--Welcome to Sunday!-->
         <scene sceneID="tGu-fB-TOz">
             <objects>
-                <tableViewController id="VCu-L6-RWW" customClass="SundayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="partialCurl" id="VCu-L6-RWW" customClass="SundayTableViewController" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4MD-En-8Cp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -704,7 +711,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zsY-GR-qVj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2oh-nc-nu6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="2oh-nc-nu6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tIC-go-of7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -769,7 +776,7 @@
         <!--Navigation Controller-->
         <scene sceneID="i7W-sw-b1s">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AhD-pm-lU4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="AhD-pm-lU4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f4v-gb-ZqJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -834,7 +841,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hMz-0L-3aJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tdY-FO-NwI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="tdY-FO-NwI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HCR-22-v5G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -899,7 +906,7 @@
         <!--Navigation Controller-->
         <scene sceneID="NLD-Ng-OKd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nS1-4Z-FuW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="nS1-4Z-FuW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fnh-6C-EvL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -964,7 +971,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MpF-TI-Xsa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P6Z-P9-eVe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="P6Z-P9-eVe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dYz-g6-4ko">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1029,7 +1036,7 @@
         <!--Navigation Controller-->
         <scene sceneID="V8H-hG-QEk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CdX-qJ-SRV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="CdX-qJ-SRV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fg7-aM-sGI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1094,7 +1101,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Xsl-Zi-FyT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e3Q-rT-XJl" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="e3Q-rT-XJl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rot-DA-V97">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1159,7 +1166,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gEY-hA-88t">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAJ-m9-M9U" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="NAJ-m9-M9U" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rah-4Q-5by">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1195,7 +1202,7 @@
         <!--Navigation Controller-->
         <scene sceneID="C3m-Sq-CIO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fy4-0t-xy1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="Fy4-0t-xy1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V9j-Uo-FZE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1203,7 +1210,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="wfs-CM-fVQ" kind="relationship" relationship="rootViewController" id="sB6-Cq-jdB"/>
+                        <segue destination="ZXZ-Cy-xtn" kind="relationship" relationship="rootViewController" id="uRn-N1-eRd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cN6-bk-DHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1211,121 +1218,121 @@
             <point key="canvasLocation" x="-1436" y="-1295"/>
         </scene>
         <!--Help Screen-->
-        <scene sceneID="Dtg-KT-bk3">
+        <scene sceneID="s5o-n7-W4u">
             <objects>
-                <viewController id="wfs-CM-fVQ" customClass="HelpScreen" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="ZXZ-Cy-xtn" customClass="HelpScreen" customModule="_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6eh-n3-MFq"/>
-                        <viewControllerLayoutGuide type="bottom" id="kac-Ue-mpE"/>
+                        <viewControllerLayoutGuide type="top" id="rFs-pE-aYf"/>
+                        <viewControllerLayoutGuide type="bottom" id="vUI-Jb-9Hv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lu2-9Z-Fbg">
+                    <view key="view" contentMode="scaleToFill" id="if4-5t-JUG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzG-gR-5ev">
-                                <rect key="frame" x="238" y="89" width="123" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="EXj-0k-x0C"/>
-                                    <constraint firstAttribute="width" constant="123" id="Lap-oC-el7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Schedj">
-                                    <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjY-St-w7e" userLabel="mondayButton">
-                                <rect key="frame" x="20" y="275" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nec-38-gx2" userLabel="mondayButton">
+                                <rect key="frame" x="65" y="372" width="100" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.90785145" blue="0.57201985730000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="M"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swp-Qe-Lbd" userLabel="tuesdayButton">
-                                <rect key="frame" x="59" y="167" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6u-P2-Upw" userLabel="tuesdayButton">
+                                <rect key="frame" x="128" y="480" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.61550945999999995" green="1" blue="0.86350491119999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="T"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-vd-8Xv" userLabel="wednesdayButton">
-                                <rect key="frame" x="128" y="275" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUl-BU-eNb" userLabel="wednesdayButton">
+                                <rect key="frame" x="173" y="372" width="100" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.80043024600000001" blue="0.96037866309999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="W"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLi-qG-lIb" userLabel="thursdayButton">
-                                <rect key="frame" x="167" y="167" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4f-0b-Rym" userLabel="thursdayButton">
+                                <rect key="frame" x="238" y="480" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.82881114150000001" green="1" blue="0.5495281957" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Th"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFg-hv-j9R" userLabel="fridayButton">
-                                <rect key="frame" x="238" y="275" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INA-8Y-YyQ" userLabel="fridayButton">
+                                <rect key="frame" x="281" y="372" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.8063284933" green="0.82707728560000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="F"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sW1-8e-dwc" userLabel="saturdayButton">
-                                <rect key="frame" x="275" y="167" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZE-yt-vDW" userLabel="saturdayButton">
+                                <rect key="frame" x="346" y="480" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.54354524849999997" green="0.82705395839999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="S"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5M-tV-YsU" userLabel="sundayButton">
-                                <rect key="frame" x="346" y="275" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUl-IO-3EN" userLabel="sundayButton">
+                                <rect key="frame" x="20" y="480" width="100" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.78886632550000002" blue="0.57741622410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Su"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here for main 2Do List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unh-em-ebL">
-                                <rect key="frame" x="20" y="72" width="203" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here for main 2Do List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy9-lL-icx">
+                                <rect key="frame" x="20" y="72" width="242" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="203" id="jip-7a-E42"/>
-                                    <constraint firstAttribute="height" constant="22" id="u6n-Wo-im5"/>
+                                    <constraint firstAttribute="height" constant="22" id="GoQ-VK-NXN"/>
+                                    <constraint firstAttribute="width" constant="242" id="geW-Wa-bJ7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click any of these icons to travel to Daily List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlG-eT-NfI">
-                                <rect key="frame" x="128" y="383" width="333" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgh-dY-8Rh">
+                                <rect key="frame" x="236" y="119" width="128" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="333" id="YOB-lT-TaF"/>
-                                    <constraint firstAttribute="height" constant="33" id="mSm-3M-D5L"/>
+                                    <constraint firstAttribute="height" constant="55" id="YEl-GJ-rAf"/>
+                                    <constraint firstAttribute="width" constant="128" id="xTe-eD-e9y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click below for Daily List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsS-nz-xiZ">
+                                <rect key="frame" x="65" y="331" width="197" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="J6X-ZX-94J"/>
+                                    <constraint firstAttribute="width" constant="197" id="qV8-ZY-Plk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lzG-gR-5ev" firstAttribute="centerX" secondItem="Lu2-9Z-Fbg" secondAttribute="centerX" id="Qbk-ec-ZZg"/>
-                            <constraint firstItem="nlG-eT-NfI" firstAttribute="leading" secondItem="Lu2-9Z-Fbg" secondAttribute="leadingMargin" constant="108" id="TU8-tb-uFS"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="unh-em-ebL" secondAttribute="leading" id="ZSX-9M-8kt"/>
-                            <constraint firstItem="kac-Ue-mpE" firstAttribute="top" secondItem="nlG-eT-NfI" secondAttribute="bottom" constant="184" id="fPS-jh-FMJ"/>
-                            <constraint firstItem="unh-em-ebL" firstAttribute="top" secondItem="6eh-n3-MFq" secondAttribute="bottom" constant="8" id="iFc-rM-XxI"/>
-                            <constraint firstItem="lzG-gR-5ev" firstAttribute="top" secondItem="6eh-n3-MFq" secondAttribute="bottom" constant="25" id="ytl-Bl-NQ6"/>
+                            <constraint firstItem="xsS-nz-xiZ" firstAttribute="leading" secondItem="if4-5t-JUG" secondAttribute="leadingMargin" constant="45" id="BeJ-76-1KU"/>
+                            <constraint firstItem="xsS-nz-xiZ" firstAttribute="top" secondItem="rFs-pE-aYf" secondAttribute="bottom" constant="267" id="HT7-7Q-IbB"/>
+                            <constraint firstItem="xsS-nz-xiZ" firstAttribute="top" secondItem="hy9-lL-icx" secondAttribute="bottom" constant="237" id="O1f-8Y-8Hm"/>
+                            <constraint firstItem="pgh-dY-8Rh" firstAttribute="top" secondItem="rFs-pE-aYf" secondAttribute="bottom" constant="55" id="aWX-qm-Rng"/>
+                            <constraint firstItem="pgh-dY-8Rh" firstAttribute="centerX" secondItem="if4-5t-JUG" secondAttribute="centerX" id="oRA-zw-y0e"/>
+                            <constraint firstItem="hy9-lL-icx" firstAttribute="leading" secondItem="if4-5t-JUG" secondAttribute="leadingMargin" id="ohT-zP-BQk"/>
+                            <constraint firstItem="hy9-lL-icx" firstAttribute="top" secondItem="rFs-pE-aYf" secondAttribute="bottom" constant="8" symbolic="YES" id="vJ2-9b-HBi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dDI-Kh-gBM">
-                        <barButtonItem key="leftBarButtonItem" title="Help" id="4o9-u7-TuJ">
-                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8oe-q8-eD0">
-                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <navigationItem key="navigationItem" id="FZP-4E-ri6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NnP-wA-5j0">
+                            <connections>
+                                <segue destination="QQ7-7Y-PVX" kind="unwind" unwindAction="unwindToHomeViewController:" id="R6W-wA-bWE"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="fridayButton" destination="eFg-hv-j9R" id="Ryi-87-DDU"/>
-                        <outlet property="mondayButton" destination="DjY-St-w7e" id="2yY-t7-qLz"/>
-                        <outlet property="saturdayButton" destination="sW1-8e-dwc" id="hN7-O8-Jkb"/>
-                        <outlet property="sundayButton" destination="H5M-tV-YsU" id="m1Y-wf-jW2"/>
-                        <outlet property="thursdayButton" destination="bLi-qG-lIb" id="ubz-wX-H3Q"/>
-                        <outlet property="tuesdayButton" destination="Swp-Qe-Lbd" id="flg-d7-vpH"/>
-                        <outlet property="wednesdayButton" destination="sMR-vd-8Xv" id="t3P-Bh-AwA"/>
+                        <outlet property="fridayButton" destination="INA-8Y-YyQ" id="MWI-3y-LG4"/>
+                        <outlet property="mondayButton" destination="Nec-38-gx2" id="WdG-fC-8BC"/>
+                        <outlet property="saturdayButton" destination="wZE-yt-vDW" id="xCZ-Si-edv"/>
+                        <outlet property="sundayButton" destination="yUl-IO-3EN" id="sAz-kw-uVP"/>
+                        <outlet property="thursdayButton" destination="I4f-0b-Rym" id="kKq-qk-0GM"/>
+                        <outlet property="tuesdayButton" destination="p6u-P2-Upw" id="vgY-a8-F55"/>
+                        <outlet property="view" destination="if4-5t-JUG" id="hSu-lS-ePO"/>
+                        <outlet property="wednesdayButton" destination="DUl-BU-eNb" id="zQi-ED-A3G"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AQ4-PR-22H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xA-R2-Lyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QQ7-7Y-PVX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1436" y="-2019"/>
         </scene>

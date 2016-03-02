@@ -52,6 +52,10 @@ class HomeViewController: UIInputViewController {
         configureButton(sundayButton)
     }
     
+    @IBAction func unwindToHomeViewController(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
